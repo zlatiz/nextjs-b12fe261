@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: #0F0F14;
+    --foreground: #FFFFFF;
+    --primary: #1F1B2E;
+    --primary-foreground: #ffffff;
+    --secondary: #FF6B6B;
+    --muted: #16121A;
+    --muted-foreground: #BDB6C6;
+    --accent: #00E0A8;
+    --border: #2A2540;
+    --radius: 12px;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  html, body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', Manrope, system-ui;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* layout utilities */
+.header-sticky {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(31,27,46,0.6), rgba(27,22,38,0.55));
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  backdrop-filter: blur(8px);
+}
+
+.gradient-cta {
+  background: linear-gradient(135deg, #4B2678 0%, #00E0A8 100%);
+}
